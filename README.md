@@ -44,6 +44,12 @@ dominos.dtypes
 dominos.isnull().sum()
 ```
 
+<p>There are no duplicate rows.</p>
+
+```
+dominos.duplicated().sum()
+```
+
 <h3>Analysis</h3>
 
 ```
@@ -63,7 +69,30 @@ min	254.890000	257.610000	253.080000	255.700000	251.350000	1.843000e+05
 max	541.990000	548.720000	536.110000	540.470000	539.480000	1.027880e+07
 ```
 
+```
+dominos['Date'] = pd.to_datetime(dominos['Date'])
+dominos['Date'].min()
+dominos['Date'].max()
+```
 
+<p>Converted the date column to the date time data type, found the dataset start date of 2019-10-16, and the dataset end date of 2021-10-15.</p>
+
+```
+dominos.corr()
+
+```
+
+<p>Found the correlation of each variable concerning each other. The volume appears to be the only variable that has a slightly negative correlation close to 0 in relation to the other variables. Open, High, Low, Close, and Adj Close all share a correlation close positive 1. </p>
+
+```
+	      Open	     High	   Low	      Close	  Adj Close	    Volume
+Open	1.000000	0.996773	0.997980	0.995542	0.995534	-0.175188
+High	0.996773	1.000000	0.995794	0.997934	0.997772	-0.147154
+Low	0.997980	0.995794	1.000000	0.997341	0.997395	-0.187099
+Close	0.995542	0.997934	0.997341	1.000000	0.999897	-0.163411
+Adj Close	0.995534	0.997772	0.997395	0.999897	1.000000	-0.165840
+Volume	-0.175188	-0.147154	-0.187099	-0.163411	-0.165840	1.000000
+```
 
 
 
