@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
   <li>Types of data values </li>
 </ul>
 
-<p>The code below saves the dominos stock price data to the variable dominos and finds its shape and column names. The data set has 505 rows and 7 columns: Date, Open, High, Low, Close, Adj Close, Volume.</p>
+<p>The code below saves the dominos stock price data to the variable dominos and finds its shape and column names. The data set has 505 rows and 7 columns: Date, Open, High, Low, Close, Adj Close, and  Volume.</p>
 
 ```
 dominos = pd.read_csv('Dominos_Stock_Data.csv')
@@ -32,7 +32,7 @@ dominos.shape
 dominos.columns
 ```
 
-<p>Now, its time to determine the data types: Date is object, Open/High/Low/Close/Adj Close are float64, and Volume in int64. Date will be changes to a different data type later. </p>
+<p>Now, its time to determine the data types: Date is object, Open/High/Low/Close/Adj Close are float64, and Volume in int64. Date will be changed to a different data type later. </p>
 
 ```
 dominos.dtypes
