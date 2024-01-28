@@ -27,7 +27,7 @@ import matplotlib.pyplot as plt
 <p>The code below saves the dominos stock price data to the variable dominos and finds its shape and column names. The data set has 505 rows and 7 columns: Date, Open, High, Low, Close, Adj Close, Volume.</p>
 
 ```
-dominos.isnull().sum()
+dominos = pd.read_csv('Dominos_Stock_Data.csv')
 dominos.shape
 dominos.columns
 ```
