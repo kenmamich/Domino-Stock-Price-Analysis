@@ -51,7 +51,7 @@ dominos.drop('Adj Close', axis = 1, inplace = True)
 dominos['Date'] = pd.to_datetime(dominos['Date'])
 ```
 
-<p>Dataset has no duplicate rows.</p>
+<p>There exists no duplicate rows.</p>
 
 ```
 dominos.duplicated().sum()
