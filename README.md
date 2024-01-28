@@ -5,5 +5,13 @@
 <p>Due to the project being completed using Jupyter Notebook, there is no need to install my project on your machine. If you want to explore the code and its outputs more in-depth click on Domino's Stock Price Analysis.ipynb file in the repository and there you can find code blocks with their outputs.</p>
 
 <h2>Documentation</h2>
+
 <h3>Library</h3>
-<p></p>
+<p>To start, all necessary libraries must be imported. For this project, the only libraries needed are pandas, scripy, sklearn.cluster, and matplotlib.pyplot. These libraries will allow me to perform analysis, create visualizations, and perform Kmeans clustering on the dataset.</p>
+
+```
+import pandas as pd
+from scipy import stats
+from sklearn.cluster import KMeans
+import matplotlib.pyplot as plt
+```
