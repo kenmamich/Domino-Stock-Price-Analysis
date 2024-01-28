@@ -117,7 +117,7 @@ dominos.nsmallest(5,'Volume')
 dominos.drop('Adj Close', axis = 1, inplace = True)
 ```
 
-<p>Decided to drop Adj Close.</p>
+<p>Dropped Adj Close and will only look at the Close column.</p>
 
 ```
 plt.figure(figsize=(12, 6))
@@ -129,7 +129,7 @@ plt.ylabel('Trading Volume')
 plt.legend()
 ```
 
-<p>Ploted a visualization displaying trading volume over time.</p>
+<p>Visualization displaying trading volume over time.</p>
 
 ```
 plt.figure(figsize=(12, 6))
@@ -141,7 +141,7 @@ plt.ylabel('Closing Price')
 plt.legend()
 ```
 
-<p>Ploted a visualization displaying the change is closing price over time.</p>
+<p>Visualization displaying the change in closing price over time.</p>
 
 
 
