@@ -185,6 +185,33 @@ dominos[dominos['Price Gap'].notna()].apply(lambda row: row['Return'], axis=1).m
 
 <p>Creates the Price Gap column, which is the difference between one day's opening price and the previous day's closing price. The purpose of creating this column is to see if there was an after-market stock price movement and whether investing in the opportunity to pursue after-marketing trading is worth it for the Domino stock. All possible na values were filled with 0 and found the average price gap to be 0.13796142236277276 indicating there is after-market stock price movement.</p>
 
+```
+dominos['Price Gap'].mean()
+```
+
+<p>Finds the mean, as well, as producing the output 0.17310891089108943, which is different than the average before.</p>
+
+
+```
+investment_horizon = 252 
+total_return = (1 + dominos['Return'] / 100).cumprod().tail(investment_horizon).prod() - 1
+total_return
+```
+
+<p>The total return for one trading year represented in the dataset, which is 252 days, is 9.036274116179685e+54%. This is on par with the S&P 500 seeing average yearly returns of 8-12% each investment year.</p>
+
+```
+dominos['Price Range'] = dominos['High'] - dominos['Low']
+dominos.groupby('Year')['Price Range'].mean()
+```
+
+<p>Creates price gap column which is the difference between that day's high and its low. The purpose of creating this column is to display how much the stock price moved around for the day. And, also found the average price gap for each year. 2019 is 5.569245, 2020 is 10.744111, and 2021 is 8.764523. 
+
+
+```
+
+
+```
 
 
 
