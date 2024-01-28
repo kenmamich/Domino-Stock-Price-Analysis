@@ -44,6 +44,19 @@ dominos.dtypes
 dominos.isnull().sum()
 ```
 
+<p>Adj Close column was dropped and Date was changed to the datetime data type.</p>
+
+```
+dominos.drop('Adj Close', axis = 1, inplace = True)
+dominos['Date'] = pd.to_datetime(dominos['Date'])
+```
+
+<p>Dataset has no duplicate rows.</p>
+
+```
+dominos.duplicated().sum()
+```
+
 <h3>Analysis</h3>
 
 
