@@ -166,4 +166,25 @@ dominos.groupby('Year')['Return'].mean()
 
 <p>Creates Year column and finds the average daily return for each year. 2019 had an average daily return of 0.270001%, 2020 had an average of 0.141122%, and 2021 had an average of 0.098777%.</p>
 
+```
+conin = (dominos['Return']> 0)
+conin.groupby((~conin).cumsum()).cumcount().max() + 1
+
+conde = (dominos['Return']> 0)
+conde.groupby((~conde).cumsum()).cumcount().max() + 1 
+```
+
+<p>During the period covered by the dataset, the longest consecutive positive return days were 8 and the longest consecutive negative return days were 8, as well. </p>
+
+
+```
+dominos['Price Gap'] = (dominos['Open'] - dominos['Close'].shift(1))
+dominos['Price Gap'].fillna(0,inplace=True)
+dominos[dominos['Price Gap'].notna()].apply(lambda row: row['Return'], axis=1).mean()
+```
+
+<p>Creates the Price Gap column, which is the difference between one day's opening price and the previous day's closing price. The purpose of creating this column is to see if there was an after-market stock price movement and whether investing in the opportunity to pursue after-marketing trading is worth it for the Domino stock. All possible na values were filled with 0 and found the average price gap to be 0.13796142236277276 indicating there is after-market stock price movement.</p>
+
+
+
 
