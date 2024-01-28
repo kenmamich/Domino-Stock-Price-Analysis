@@ -143,6 +143,27 @@ plt.legend()
 
 <p>Visualization displaying the change in closing price over time.</p>
 
+```
+dominos.reset_index(inplace=True)
+dominos['Return'] = dominos['Close'].pct_change() * 100
+plt.figure(figsize=(12, 6))
+plt.plot(dominos['Date'], dominos['Return'], label='Daily Returns', color='blue')
+plt.title('Daily Returns for Domino\'s Stock')
+plt.xlabel('Date')
+plt.ylabel('Percentage Change (%)')
+plt.legend()
+plt.grid(True)
+plt.show()
 
+```
+
+<p>Created a Return column showing daily returns as a percentage and created a visualization displaying daily returns for the Domino stock price.</p>
+
+```
+dominos['Year'] = dominos['Date'].dt.year
+dominos.groupby('Year')['Return'].mean()
+```
+
+<p>Creates Year column and finds the average daily return for each year. 2019 had an average daily return of 0.270001%, 2020 had an average of 0.141122%, and 2021 had an average of 0.098777%.</p>
 
 
