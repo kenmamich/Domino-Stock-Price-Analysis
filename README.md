@@ -58,7 +58,7 @@ dominos.describe()
 <p>Found the summary statistics for each column.</p>
 
 ```
-        Open	       High	      Low        Close	     Adj Close	       Volume
+	Open	         High	         Low        Close	     Adj Close	       	Volume
 count	505.000000	505.000000	505.000000	505.000000	505.000000	5.050000e+02
 mean	385.391723	390.291347	380.870416	385.614693	382.575584	6.996162e+05
 std	67.485552	    67.673877	 67.327659	   67.378659	  68.525904	  5.993578e+05
