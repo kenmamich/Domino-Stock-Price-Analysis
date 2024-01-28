@@ -32,17 +32,18 @@ dominos.shape
 dominos.columns
 ```
 
-<p>Now, its time to determine the data types: Date is object, Open/High/Low/Close/Adj Close are float64, and Volume in int64. Date will be changed to a different data type later. </p>
+<p>Now, its time to determine the data types for each column: Date is object, Open/High/Low/Close/Adj Close are float64, and Volume in int64. Date will be changed to a different data type later. </p>
 
 ```
 dominos.dtypes
 ```
 
-<p>There appears to be no null values.</p>
+<p>Additionally, there appears to be no null values.</p>
 
 ```
 dominos.isnull().sum()
 ```
+
 
 
 
