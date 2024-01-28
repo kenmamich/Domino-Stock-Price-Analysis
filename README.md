@@ -15,3 +15,33 @@ from scipy import stats
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 ```
+
+<h3>Getting Started</h3>
+<p>Next step is to thoroughly look through the data set looking for the following:</p>
+<ul>
+  <li>Names of the columns and rows</li>
+  <li>Any noticeable missing data</li>
+  <li>Types of data values <li>
+</ul>
+
+<p>The code below saves the dominos stock price data to the variable dominos and finds its shape and column names. The data set has 505 rows and 7 columns: Date, Open, High, Low, Close, Adj Close, Volume.</p>
+
+```
+dominos.shape
+dominos.columns
+```
+
+<p>Now, its time to determine the data types: Date is object, Open/High/Low/Close/Adj Close are float64, and Volume in int64. Date will be changes to a different data type later. </p>
+
+```
+dominos.dtypes
+```
+
+<p>There appears to be no null values.</p>
+
+```
+dominos.isnull().sum()
+```
+
+
+
