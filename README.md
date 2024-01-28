@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 <ul>
   <li>Names of the columns and rows</li>
   <li>Any noticeable missing data</li>
-  <li>Types of data values <li>
+  <li>Types of data values </li>
 </ul>
 
 <p>The code below saves the dominos stock price data to the variable dominos and finds its shape and column names. The data set has 505 rows and 7 columns: Date, Open, High, Low, Close, Adj Close, Volume.</p>
