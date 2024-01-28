@@ -44,19 +44,6 @@ dominos.dtypes
 dominos.isnull().sum()
 ```
 
-<p>Adj Close column was dropped and Date was changed to the datetime data type.</p>
-
-```
-dominos.drop('Adj Close', axis = 1, inplace = True)
-dominos['Date'] = pd.to_datetime(dominos['Date'])
-```
-
-<p>There are no duplicate rows.</p>
-
-```
-dominos.duplicated().sum()
-```
-
 <h3>Analysis</h3>
 
 ```
@@ -75,6 +62,8 @@ min	254.890000	257.610000	253.080000	255.700000	251.350000	1.843000e+05
 75%	418.090000	423.110000	415.740000	419.700000	415.290000	7.863000e+05
 max	541.990000	548.720000	536.110000	540.470000	539.480000	1.027880e+07
 ```
+
+
 
 
 
