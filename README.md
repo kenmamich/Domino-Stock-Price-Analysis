@@ -79,7 +79,6 @@ dominos['Date'].max()
 
 ```
 dominos.corr()
-
 ```
 
 <p>Found the correlation of each variable concerning each other. The volume appears to be the only variable that has a slightly negative correlation close to 0 in relation to the other variables. Open, High, Low, Close, and Adj Close all share a correlation close positive 1. </p>
@@ -93,6 +92,57 @@ Close	0.995542	0.997934	0.997341	1.000000	0.999897	-0.163411
 Adj Close 0.995534	0.997772	0.997395	0.999897	1.000000	-0.165840
 Volume	-0.175188	-0.147154	-0.187099	-0.163411	-0.165840	1.000000
 ```
+
+```
+z_scores = stats.zscore(dominos['Close']) 
+dominos[(z_scores > 3) | (z_scores < -3)]
+```
+
+<p>Attempted to find any existing outliers based on having a z score greater than 3 or  smaller than -3. There are no outliers.</p>
+
+```
+dominos.nlargest(5,'Volume')
+```
+
+<p>The top 5 days where traders were the most active are 2020-05-11, 2020-02-20, 2020-10-08, 2021-07-22, and 2021-02-25</p>
+
+
+```
+dominos.nsmallest(5,'Volume')
+```
+
+<p>The top 5 days where traders were the least active are 2020-12-24, 2021-08-26, 2021-08-27, 2021-09-29, and 2021-09-23.</p>
+
+```
+dominos.drop('Adj Close', axis = 1, inplace = True)
+```
+
+<p>Decided to drop Adj Close.</p>
+
+```
+plt.figure(figsize=(12, 6))
+plt.subplot(2, 1, 1)
+plt.plot(dominos.index, dominos['Volume'], color='blue', label='Trading Volume')
+plt.title('Trading Volume Over Time')
+plt.xlabel('Date')
+plt.ylabel('Trading Volume')
+plt.legend()
+```
+
+<p>Ploted a visualization displaying trading volume over time.</p>
+
+```
+plt.figure(figsize=(12, 6))
+plt.subplot(2, 1, 2)
+plt.plot(dominos.index, dominos['Close'], color='green', label='Closing Price')
+plt.title('Closing Price Over Time')
+plt.xlabel('Date')
+plt.ylabel('Closing Price')
+plt.legend()
+```
+
+<p>Ploted a visualization displaying the change is closing price over time.</p>
+
 
 
 
