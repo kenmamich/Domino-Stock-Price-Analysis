@@ -49,10 +49,9 @@ dominos.isnull().sum()
 
 ```
 dominos.describe()
-```
-<p>And, the output is as follows:</p>
 
-```
+#Output of the code is below.
+
 	       Open	       High	       Low	      Close	     Adj Close	   Volume
 count	505.000000	505.000000	505.000000	505.000000	505.000000	5.050000e+02
 mean	385.391723	390.291347	380.870416	385.614693	382.575584	6.996162e+05
