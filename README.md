@@ -166,7 +166,8 @@ plt.show()
 ![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/d606cc59-e6a1-44c2-9479-0ab734c1d88b)
 
 
-<p>Created a Return column showing daily returns as a percentage and created a visualization displaying daily returns for the Domino stock price.</p>
+<p>Created a return column showing daily returns as a percentage and made a visualization displaying daily returns for the Domino stock price. The graph displays unpredictability in daily returns in the stock price as expected, additionally, shows relative stability around 0% daily returns.</p>
+
 
 ```
 dominos['Year'] = dominos['Date'].dt.year
