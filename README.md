@@ -220,7 +220,7 @@ dominos['Return'].apply(lambda x: 1 if x == 0 else 0).sum()
 
 ```
 
-<p>Wanted to find how many days have positive, negative, or zero returns. Found that 260 days experienced positive returns, 241 days experienced negative returns, and 4 days experienced no returns. </p>
+<p>Wanted to find how many days have positive, negative, or zero returns. Found that 260 days experienced positive returns, 241 days experienced negative returns, and 4 days experienced no returns. The stock price saw more positive return days than negative return days. </p>
 
 
 ```
@@ -235,6 +235,8 @@ plt.ylabel('Adj Close Price')
 plt.show()
 ```
 
-<p>Used Kmeans clustering on the dataset and categorized the data points into three different clusters: green, purple, and yellow.</p>
+<p>Used Kmeans clustering on the dataset and categorized the data points into three different clusters: green, purple, and yellow. Yellow displayed stock price trends that were unstable and erratic, purple displayed stock price trends that were relatively stable, and green represented stock price trends displaying gradual and stable increases.</p>
+
+![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/caa43bce-4f11-42a7-bccd-2f06f228bffb)
 
 
