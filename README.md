@@ -247,7 +247,7 @@ plt.show()
 
 ![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/caa43bce-4f11-42a7-bccd-2f06f228bffb)
 
-<p>Used Kmeans clustering on the dataset and categorized the data points into three different clusters: green, purple, and yellow. Yellow displayed stock price trends that were unstable and erratic, purple displayed stock price trends that were relatively stable, and green represented stock price trends displaying gradual and stable increases.</p>
+<p>Used k-means clustering on the dataset and categorized the data points into three different clusters: green, purple, and yellow. Yellow displayed stock price trends that were unstable and erratic, purple displayed stock price trends that were relatively stable, and green represented stock price trends displaying gradual and stable increases.</p>
 
 
 
