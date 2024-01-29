@@ -132,7 +132,7 @@ plt.legend()
 ![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/f2cf866e-faca-46a6-89d3-6124bd6cd494)
 
 
-<p>Visualization displaying trading volume over time. Graph shows relative stability to trader activity with steep peaks, indicating heavy investor activity on certain days.</p>
+<p>Visualization displaying trading volume over time. The graph shows relative stability in trader activity with steep peaks scattered throughout, which indicates heavy investor activity on certain days.</p>
 
 ```
 plt.figure(figsize=(12, 6))
@@ -147,7 +147,7 @@ plt.legend()
 ![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/5884c416-16c0-4e15-8d3d-5c49bfac6632)
 
 
-<p>Visualization displaying the change in closing price over time.</p>
+<p>Visualization displaying the change in closing price over time. The graph shows that as time passes, the stock price is experiencing a gradual upward trend showing dominos could be a potentially good stock to hold in the long term. </p>
 
 ```
 dominos.reset_index(inplace=True)
