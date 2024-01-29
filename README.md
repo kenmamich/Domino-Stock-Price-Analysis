@@ -132,7 +132,7 @@ plt.legend()
 ![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/f2cf866e-faca-46a6-89d3-6124bd6cd494)
 
 
-<p>Visualization displaying trading volume over time.</p>
+<p>Visualization displaying trading volume over time. Graph shows relative stability to trader activity with steep peaks, indicating heavy investor activity on certain days.</p>
 
 ```
 plt.figure(figsize=(12, 6))
