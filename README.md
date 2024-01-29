@@ -189,7 +189,7 @@ dominos[dominos['Price Gap'].notna()].apply(lambda row: row['Return'], axis=1).m
 dominos['Price Gap'].mean()
 ```
 
-<p>Finds the mean, as well, as producing the output 0.17310891089108943, which is different than the average before.</p>
+<p>Finds the mean price gap, as well, producing the output 0.17310891089108943, which is different than the average before.</p>
 
 
 ```
@@ -205,13 +205,36 @@ dominos['Price Range'] = dominos['High'] - dominos['Low']
 dominos.groupby('Year')['Price Range'].mean()
 ```
 
-<p>Creates price gap column which is the difference between that day's high and its low. The purpose of creating this column is to display how much the stock price moved around for the day. And, also found the average price gap for each year. 2019 is 5.569245, 2020 is 10.744111, and 2021 is 8.764523. 
+<p>Creates price range column which is the difference between that day's high and its low. The purpose of creating this column is to display how much the stock price moved around for the day. I also found the average price gap for each year. 2019 is 5.569245, 2020 is 10.744111, and 2021 is 8.764523. 
 
 
 ```
+(dominos['Return'] > 0).apply(lambda x: x).mean() * 100
+dominos['Return'].apply(lambda x: 1 if x > 0 else 0).sum()
 
+(dominos['Return'] < 0).apply(lambda x: x).mean() * 100
+dominos['Return'].apply(lambda x: 1 if x < 0 else 0).sum()
+
+(dominos['Return'] == 0).apply(lambda x: x).mean() * 100
+dominos['Return'].apply(lambda x: 1 if x == 0 else 0).sum()
 
 ```
 
+<p>Wanted to find how many days have positive, negative, or zero returns. Found that 260 days experienced positive returns, 241 days experienced negative returns, and 4 days experienced no returns. </p>
+
+
+```
+features = dominos[['Open', 'High', 'Low', 'Close', 'Volume']]
+features_standardized = (features - features.mean()) / features.std()
+kmeans = KMeans(n_clusters=3, random_state=42)
+dominos['Cluster'] = kmeans.fit_predict(features_standardized)
+plt.scatter(dominos.index, dominos['Close'], c=dominos['Cluster'], cmap='viridis')
+plt.title('Clustering of Domino\'s Pizza Stock Prices')
+plt.xlabel('Days')
+plt.ylabel('Adj Close Price')
+plt.show()
+```
+
+<p>Used Kmeans clustering on the dataset and categorized the data points into three different clusters: green, purple, and yellow.</p>
 
 
