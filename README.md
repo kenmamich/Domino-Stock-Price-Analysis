@@ -1,5 +1,5 @@
 <h1>Domino's Stock Price Analysis</h1>
-<p>This project conducts analysis on a dataset containing Domino's Stock price data using the Python programming language and the popular library Pandas. The analysis explores various aspects of the stock, such as trading volume, stock price trends, returns, and potential patterns or clusters in stock price movements over time.</p>
+<p>This project analyzes a dataset containing Domino's Stock price data using the Python programming language and the popular library Pandas. The analysis explores various aspects of the stock, such as trading volume, stock price trends, returns, and potential patterns or clusters in stock price movements over time.</p>
 
 <h2>Installation</h2>
 <p>Due to the project being completed using Jupyter Notebook, there is no need to install my project on your machine. If you want to explore the code and its outputs more in-depth click on Domino's Stock Price Analysis.ipynb file in the repository and there you can find code blocks with their outputs.</p>
@@ -7,7 +7,7 @@
 <h2>Documentation</h2>
 
 <h3>Library</h3>
-<p>To start, all necessary libraries must be imported. For this project, the only libraries needed are pandas, scripy, sklearn.cluster, and matplotlib.pyplot. These libraries will allow me to perform analysis, create visualizations, and perform Kmeans clustering on the dataset.</p>
+<p>To start, all necessary libraries must be imported. For this project, the only libraries needed are pandas, scripy, sklearn.cluster, and matplotlib.pyplot. These libraries will allow me to perform analysis, create visualizations, and perform k-means clustering on the dataset.</p>
 
 ```
 import pandas as pd
@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
   <li>Types of data values </li>
 </ul>
 
-<p>The code below saves the dominos stock price data to the variable dominos and finds its shape and column names. The data set has 505 rows and 7 columns: Date, Open, High, Low, Close, Adj Close, and  Volume.</p>
+<p>The code below saves the Domino stock price data to the variable Domino and finds its shape and column names. The data set has 505 rows and 7 columns: Date, Open, High, Low, Close, Adj Close, and  Volume.</p>
 
 ```
 dominos = pd.read_csv('Dominos_Stock_Data.csv')
@@ -32,7 +32,7 @@ dominos.shape
 dominos.columns
 ```
 
-<p>Now, its time to determine the data types for each column: Date is object, Open/High/Low/Close/Adj Close are float64, and Volume in int64. Date will be changed to a different data type later. </p>
+<p>Now, it"s time to determine the data types for each column: Date is object, Open/High/Low/Close/Adj Close are float64, and Volume in int64. Date will be changed to a different data type later. </p>
 
 ```
 dominos.dtypes
@@ -166,7 +166,7 @@ plt.show()
 ![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/d606cc59-e6a1-44c2-9479-0ab734c1d88b)
 
 
-<p>Created a return column showing daily returns as a percentage and made a visualization displaying daily returns for the Domino stock price. The graph displays unpredictability in daily returns in the stock price as expected, additionally, shows relative stability around 0% daily returns.</p>
+<p>Created a Return column showing daily returns as a percentage and made a visualization displaying daily returns for the Domino stock price. The graph displays unpredictability in daily returns in the stock price as expected, additionally, shows relative stability around 0% daily returns.</p>
 
 
 ```
@@ -199,7 +199,7 @@ dominos[dominos['Price Gap'].notna()].apply(lambda row: row['Return'], axis=1).m
 dominos['Price Gap'].mean()
 ```
 
-<p>Finds the mean price gap, as well, producing the output 0.17310891089108943, which is different than the average before.</p>
+<p>Finds the mean price gap, as well, producing the output 0.17310891089108943, which is different than the average before. Would love to explore this deeper down the road.</p>
 
 
 ```
@@ -215,7 +215,7 @@ dominos['Price Range'] = dominos['High'] - dominos['Low']
 dominos.groupby('Year')['Price Range'].mean()
 ```
 
-<p>Creates price range column which is the difference between that day's high and its low. The purpose of creating this column is to display how much the stock price moved around for the day. I also found the average price gap for each year. 2019 is 5.569245, 2020 is 10.744111, and 2021 is 8.764523. 
+<p>Creates Price Range column which is the difference between that day's high and its low. The purpose of creating this column is to display how much the stock price moved around for the day. I also found the average price gap for each year. 2019 is 5.569245, 2020 is 10.744111, and 2021 is 8.764523. 
 
 
 ```
@@ -230,7 +230,7 @@ dominos['Return'].apply(lambda x: 1 if x == 0 else 0).sum()
 
 ```
 
-<p>Wanted to find how many days have positive, negative, or zero returns. Found that 260 days experienced positive returns, 241 days experienced negative returns, and 4 days experienced no returns. The stock price saw more positive return days than negative return days. </p>
+<p>I wanted to find how many days have positive, negative, or zero returns. Found that 260 days experienced positive returns, 241 days experienced negative returns, and 4 days experienced no returns. The stock price saw more positive return days than negative return days. </p>
 
 
 ```
@@ -247,7 +247,7 @@ plt.show()
 
 ![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/caa43bce-4f11-42a7-bccd-2f06f228bffb)
 
-<p>Used k-means clustering on the dataset and categorized the data points into three different clusters: green, purple, and yellow. Yellow displayed stock price trends that were unstable and erratic, purple displayed stock price trends that were relatively stable, and green represented stock price trends displaying gradual and stable increases.</p>
+<p>Used k-means clustering on the dataset and categorized the data points into three different clusters: green, purple, and yellow. Yellow displayed stock price trends that were unstable and erratic, purple displayed stock price trends that were relatively stable, and green represented stock price trends displaying gradual and stable increases. Green clusters of stock price trends could potentially be the best time for investors to enter the stock market due to the relatively stable increase in stock price shown by my analysis using k-means clustering.</p>
 
 
 
