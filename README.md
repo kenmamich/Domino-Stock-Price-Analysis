@@ -32,7 +32,7 @@ dominos.shape
 dominos.columns
 ```
 
-<p>Now, it"s time to determine the data types for each column: Date is object, Open/High/Low/Close/Adj Close are float64, and Volume in int64. Date will be changed to a different data type later. </p>
+<p>Now, it"s time to determine the data types for each column: Date is object, Open/High/Low/Close/Adj Close are float64, and Volume is int64. The date will be changed to a different data type later. </p>
 
 ```
 dominos.dtypes
@@ -81,7 +81,7 @@ dominos['Date'].max()
 dominos.corr()
 ```
 
-<p>Found the correlation of each variable concerning each other. The volume appears to be the only variable that has a slightly negative correlation close to 0 in relation to the other variables. Open, High, Low, Close, and Adj Close all share a correlation close to positive 1. </p>
+<p>Found the correlation of each variable concerning each other. The volume appears to be the only variable that has a slightly negative correlation close to 0 with the other variables indicating as volume increases the other variables experience a slight and minor decrease. Open, High, Low, Close, and Adj Close all share a correlation close to positive 1. </p>
 
 ```
 	      Open	     High	   Low	      Close	  Adj Close	    Volume
@@ -117,7 +117,7 @@ dominos.nsmallest(5,'Volume')
 dominos.drop('Adj Close', axis = 1, inplace = True)
 ```
 
-<p>Dropped Adj Close and will only look at the Close column.</p>
+<p>Dropped Adj Close and will only look at the Close column from this point on.</p>
 
 ```
 plt.figure(figsize=(12, 6))
