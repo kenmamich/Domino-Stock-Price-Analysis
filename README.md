@@ -81,7 +81,7 @@ dominos['Date'].max()
 dominos.corr()
 ```
 
-<p>Found the correlation of each variable concerning each other. The volume appears to be the only variable that has a slightly negative correlation close to 0 in relation to the other variables. Open, High, Low, Close, and Adj Close all share a correlation close positive 1. </p>
+<p>Found the correlation of each variable concerning each other. The volume appears to be the only variable that has a slightly negative correlation close to 0 in relation to the other variables. Open, High, Low, Close, and Adj Close all share a correlation close to positive 1. </p>
 
 ```
 	      Open	     High	   Low	      Close	  Adj Close	    Volume
