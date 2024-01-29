@@ -129,6 +129,9 @@ plt.ylabel('Trading Volume')
 plt.legend()
 ```
 
+![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/f2cf866e-faca-46a6-89d3-6124bd6cd494)
+
+
 <p>Visualization displaying trading volume over time.</p>
 
 ```
@@ -140,6 +143,9 @@ plt.xlabel('Date')
 plt.ylabel('Closing Price')
 plt.legend()
 ```
+
+![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/5884c416-16c0-4e15-8d3d-5c49bfac6632)
+
 
 <p>Visualization displaying the change in closing price over time.</p>
 
@@ -156,6 +162,9 @@ plt.grid(True)
 plt.show()
 
 ```
+
+![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/d606cc59-e6a1-44c2-9479-0ab734c1d88b)
+
 
 <p>Created a Return column showing daily returns as a percentage and created a visualization displaying daily returns for the Domino stock price.</p>
 
@@ -235,8 +244,10 @@ plt.ylabel('Adj Close Price')
 plt.show()
 ```
 
+![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/caa43bce-4f11-42a7-bccd-2f06f228bffb)
+
 <p>Used Kmeans clustering on the dataset and categorized the data points into three different clusters: green, purple, and yellow. Yellow displayed stock price trends that were unstable and erratic, purple displayed stock price trends that were relatively stable, and green represented stock price trends displaying gradual and stable increases.</p>
 
-![image](https://github.com/kenmamich/Domino-Stock-Price-Analysis/assets/137173829/caa43bce-4f11-42a7-bccd-2f06f228bffb)
+
 
 
